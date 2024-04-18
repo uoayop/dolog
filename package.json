@@ -11,6 +11,8 @@
     "pret:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.1.1",
     "@types/glob": "^8.1.0",
     "glob": "^10.3.12",
     "next": "14.2.1",
