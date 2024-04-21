@@ -3,17 +3,18 @@ import { getAllPosts } from "../lib/posts/post";
 
 const PostListPage = () => {
   const posts = getAllPosts();
-  console.log(posts);
 
   return (
-    <ul>
+    <ul className="border border-black">
       {posts?.map((post, i) => {
         const keyofPost = `post-${i}`;
-        console.log(">> post.slug::", post.slug);
         return (
-          <Link key={keyofPost} href={`/blog/${post.slug}`}>
-            {post.slug}
-          </Link>
+          <li
+            key={keyofPost}
+            className={`${i === 0 ? "" : "border-t border-black"} p-2`}
+          >
+            <Link href={`/blog/${post.slug}`}>{post.slug}</Link>
+          </li>
         );
       })}
     </ul>
